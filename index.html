@@ -12,6 +12,7 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
+            text-align: center;
         }
 
         button {
@@ -24,11 +25,15 @@
             border-radius: 5px;
         }
 
-        img {
+        #imagemContainer {
             max-width: 100%;
             height: auto;
             margin-top: 20px;
             display: none; /* Para esconder a imagem inicialmente */
+        }
+
+        #textoMotivacional {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -37,12 +42,17 @@
     <div>
         <button onclick="carregarImagem()">Clique aqui se estiver desanimado</button>
         <img id="imagemContainer" src="https://i.pinimg.com/474x/f0/33/37/f03337f4a1438523c5f8e8313bcd6b18.jpg" alt="Imagem Motivacional">
+        <p id="textoMotivacional">Você merece viu</p>
     </div>
 
     <script>
         function carregarImagem() {
             var imagemContainer = document.getElementById('imagemContainer');
+            var textoMotivacional = document.getElementById('textoMotivacional');
+
             imagemContainer.style.display = 'block'; // Para exibir a imagem ao clicar no botão
+            textoMotivacional.innerHTML = 'A melhor parte do meu dia é o seu sorriso. Estar com você foi a melhor decisão que tomei na vida e me sinto a pessoa mais sortuda do mundo todos os dias.Você é a minha alma gêmea, minha melhor amiga e quem eu mais posso confiar no mundo. Eu gostaria que todos os dias você se enxergasse com os meus olhos, porque eu te vejo como uma pessoa perfeita.Minha vida estava em preto e branco. Você chegou e a coloriu com seu sorriso e a sua luz.'; // Texto motivacional
+
         }
     </script>
 

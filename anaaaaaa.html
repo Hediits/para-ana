@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Motivacional</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            display: none; /* Para esconder a imagem inicialmente */
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button onclick="carregarImagem()">Clique aqui se estiver desanimado</button>
+        <img id="imagemContainer" src="https://i.pinimg.com/474x/f0/33/37/f03337f4a1438523c5f8e8313bcd6b18.jpg" alt="Imagem Motivacional">
+    </div>
+
+    <script>
+        function carregarImagem() {
+            var imagemContainer = document.getElementById('imagemContainer');
+            imagemContainer.style.display = 'block'; // Para exibir a imagem ao clicar no botão
+        }
+    </script>
+
+</body>
+</html>
